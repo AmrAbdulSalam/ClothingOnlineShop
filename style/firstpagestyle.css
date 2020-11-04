@@ -7,9 +7,7 @@
 nav {
     padding-left: 50px;
     width: 100%;
-    
     overflow: hidden;
-    
     top: 0;
 }
 
@@ -85,4 +83,33 @@ nav ul li :hover{
 #firstbut :hover ,#secondbut :hover{
     background-color: black;
     color: white;
+}
+
+.imgoffer img{
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+}
+
+.imgoffer {
+    display: inline-block;
+    padding: 20px;
+}
+.offers{
+    margin-left:150px ;
+    margin-top: 100px;
+}
+
+.imgoffer:hover{
+    transform: translateY(-10px) ;
+}
+.offertitle{
+    font-size: 10pt;
+    opacity: 0.6;
+}
+.spanprice{
+    font-size: 14pt;
 }
