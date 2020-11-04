@@ -54,6 +54,7 @@ nav ul li :hover{
    border-color: lightblue;
    margin-top: 50px;
    margin-right: 20px;
+   outline: none;
 }
 #firstbut:hover ,#secondbut:hover{
     background-color: black;
@@ -97,6 +98,7 @@ nav ul li :hover{
 .imgoffer {
     display: inline-block;
     padding: 20px;
+    transition: transform 0.7s;
 }
 .offers{
     margin-left:150px ;
@@ -112,4 +114,18 @@ nav ul li :hover{
 }
 .spanprice{
     font-size: 14pt;
+}
+.brands{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+.hoverbrand{
+    padding-left: 80px;
+}
+
+.hoverbrand:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
