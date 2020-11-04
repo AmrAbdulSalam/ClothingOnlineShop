@@ -1,0 +1,88 @@
+.container{
+    /* margin-left: 80px; */
+    margin-top: 30px;
+    
+}
+
+nav {
+    padding-left: 50px;
+    width: 100%;
+    
+    overflow: hidden;
+    
+    top: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 16pt;
+    color: black ;
+}
+nav ul li {
+    display: inline-block;
+    padding-left: 40px;
+}
+
+nav ul li :hover{
+    color: gray;
+}
+#bigname{
+    font-size: 24pt;
+}
+
+.firstinfo {
+    margin-left: 90px;
+    margin-top: 100px;
+    display: flex;
+    
+}
+
+.firstinfo p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14pt;
+}
+.firstinfo h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.firstinfo button {
+   width: 300px;
+   border-radius: 10px;
+   height: 50px;
+   color: white;
+   background-image: linear-gradient(to right, rgba(0,0,255,0.4), rgba(255,182,193,0.6));
+   border-color: lightblue;
+   margin-top: 50px;
+   margin-right: 20px;
+}
+#firstbut:hover ,#secondbut:hover{
+    background-color: black;
+    color: white;
+}
+
+.talking {
+    padding-top: 40px;
+}
+.imginfo img {
+    margin-left: 40px;
+    border-radius: 10px;
+    width: 800px;
+}
+
+.imageslider {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.imageslider img{
+    border-radius: 10px;
+    width: 100%;
+    height: 750px;
+}
+
+#firstbut :hover ,#secondbut :hover{
+    background-color: black;
+    color: white;
+}
