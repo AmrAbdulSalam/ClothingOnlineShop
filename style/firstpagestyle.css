@@ -1,8 +1,3 @@
-.container{
-    /* margin-left: 80px; */
-    margin-top: 30px;
-    
-}
 
 nav {
     padding-left: 50px;
@@ -26,6 +21,7 @@ nav ul li :hover{
 }
 #bigname{
     font-size: 24pt;
+    cursor: pointer;
 }
 
 .firstinfo {
@@ -34,15 +30,37 @@ nav ul li :hover{
     display: flex;
     
 }
+.talking {
+    animation:test 40s infinite;
+    transform: translateY(100px);  
+}
+@keyframes test {
+    10% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.intro{
+    height: 800px;
+    background-image: url("/photos/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 
 .firstinfo p {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14pt;
+    color: black;
 }
 .firstinfo h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
+    color : black;
 }
 
 .firstinfo button {
@@ -52,7 +70,7 @@ nav ul li :hover{
    color: white;
    background-image: linear-gradient(to right, rgba(0,0,255,0.4), rgba(255,182,193,0.6));
    border-color: lightblue;
-   margin-top: 50px;
+   margin-top: 150px;
    margin-right: 20px;
    outline: none;
 }
@@ -98,7 +116,7 @@ nav ul li :hover{
 .imgoffer {
     display: inline-block;
     padding: 20px;
-    transition: transform 0.7s;
+    transition: transform 0.8s;
 }
 .offers{
     margin-left:150px ;
@@ -106,7 +124,7 @@ nav ul li :hover{
 }
 
 .imgoffer:hover{
-    transform: translateY(-10px) ;
+    transform: translateY(-30px) ;
 }
 .offertitle{
     font-size: 10pt;

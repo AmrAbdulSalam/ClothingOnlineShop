@@ -16,3 +16,8 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2500); // Change image every 2 seconds
 }
+
+
+let jumpOffer = () =>{
+    document.querySelector('.offers').scrollIntoView();
+}
