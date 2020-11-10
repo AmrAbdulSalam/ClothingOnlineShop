@@ -21,3 +21,7 @@ function carousel() {
 let jumpOffer = () =>{
     document.querySelector('.offers').scrollIntoView();
 }
+
+let addOneLike = (x) => {
+  document.getElementById(x).innerText = Number(document.getElementById(x).innerText) + 1;
+}
