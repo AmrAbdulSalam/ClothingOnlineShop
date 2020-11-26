@@ -1,0 +1,101 @@
+nav {
+    padding-left: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 16pt;
+    color: black ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul li {
+    display: inline-block;
+    padding-left: 40px;
+}
+
+nav ul li :hover{
+    color: #f67e7d;
+}
+#bigname{
+    font-size: 24pt;
+    cursor: pointer;
+    color: #f67e7d;
+}
+
+.movetoRight1{
+    float: right;
+    margin-right: 100px;
+    padding-top: 9px;
+}
+.movetoRight2{
+    float: right;
+    padding-top: 9px;
+   
+}
+#logincolor{
+    color: #f67e7d;
+}
+
+
+.cont {
+    padding-left: 90px;
+}
+
+.opac{
+    opacity: 0.6;
+}
+.inputuser {
+    width: 300px;
+    height: 30px;
+    border-right : 0px;
+    border-top: 0px;
+    border-left : 0px ;
+    outline: none;
+}
+
+.info{
+    margin-top : 30px
+}
+.test {
+    width: 50px;
+    height : 30px
+}
+.inputuser1 {
+    width: 220px;
+    height: 30px;
+}
+
+.savebutton {
+    width: 310px;
+    height: 30px;
+    background-color: #f67e7d;
+    font-family: 'Courier New', Courier, monospace;
+    /* border-radius: 10px; */
+    cursor: pointer;
+    outline: none;
+}
+
+#login{
+    text-decoration: none;
+    color:  #f67e7d;
+    font-size: bold;
+}
+
+#login:hover {
+    background-color: pink;
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+}
+
+.pic{
+    padding-left: 300px;
+    padding-top: 50px;
+}
