@@ -1,4 +1,4 @@
-
+document.querySelector(".liked").style.visibility="hidden";
 
 
 
@@ -17,6 +17,10 @@ function carousel() {
   setTimeout(carousel, 2500); // Change image every 2 seconds
 }
 
+function liked(x){
+   document.querySelector("."+x).style.visibility="visible";
+   localStorage.setItem(x,"Liked");
+}
 
 let jumpOffer = () =>{
     document.querySelector('.offers').scrollIntoView();

@@ -48,7 +48,7 @@ nav ul li :hover{
 }
 .intro{
     height: 800px;
-   
+    /* background-image: url("/photos/background.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -207,3 +207,21 @@ nav ul li :hover{
 .photoslogo5{
     padding-left: 100px;
 }
+.liked{
+    padding-top: 10px;
+    padding-left: 20px;
+    color: red;
+}
+/* .firstinfo{
+    background-image: url("/photos/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid black;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 50px;
+    height: 700px;
+    margin-top: 0px;
+    padding-top: 100px;
+} */
