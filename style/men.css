@@ -40,33 +40,30 @@ nav ul li :hover{
 #logincolor{
     color: #f67e7d;
 }
-.container{
-    margin-left: 90px;
+
+
+.cont {
+    padding-left: 90px;
 }
-.boxx{
-    width: 300px;
-    height: 30px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    outline: none;
+
+
+.picture {
+    background-color: lightgray;
+    width: 1550px;
+    height: 2000px;
+    margin-right: 100px;
+    margin-left: 70px;
+    margin-top: 50px;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
 }
-#log{
-    width: 300px;
-    height: 30px;
-    background-color:#f67e7d; 
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-    outline: #f67e7d;
-}
-#sign{
-    text-decoration: none;
+
+
+.price{
     font-weight: bold;
-    color:#f67e7d;
+    font-size: 20px;
 }
-#sign:hover{
-    color: crimson;
-}
-#first{
-    color:#f67e7d ;
+.shipping {
+    opacity: 0.6;
 }
