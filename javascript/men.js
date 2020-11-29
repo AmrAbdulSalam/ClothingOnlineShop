@@ -1,14 +1,12 @@
-let hoverPicture = (x) => {
-    let arr = ['firstimage' , 'test'];
-    for(let i = 0 ; i < arr.length ; i++){
-        if(x === arr[i]){
-            document.getElementById(x).src = "./photos/menpage-photos/2.png"
-        }
-    }
+let hoverPicture = (imageSrc,imageId) => {
+    document.getElementById(imageId).src = "./photos/menpage-photos/"+imageSrc+".png";
+    document.getElementById(imageId).style.width = "356px"
+    document.getElementById(imageId).style.height = "365px"
 }
 
 
 let backToImage = (imageSrc , imageId) => {
-    document.getElementById(imageId).src = "./photos/menpage-photos/"+imageSrc+".png";
-    console.log(imageSrc)
+    document.getElementById(imageId).src = "./photos/menpage-hover/"+imageSrc+".png";
+    document.getElementById(imageId).style.width = "356px"
+    document.getElementById(imageId).style.height = "365px"
 }
