@@ -61,3 +61,15 @@ nav ul li :hover{
 .shipping {
     opacity: 0.6;
 }
+
+.arrowsbuttons{
+    width: 1550px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    margin-left: 70px; 
+   
+    padding-bottom: 20px;
+    
+}
