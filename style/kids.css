@@ -19,12 +19,12 @@ nav ul li {
 }
 
 nav ul li :hover{
-    color: #f67e7d;
+    color: #4682bf;
 }
 #bigname{
     font-size: 24pt;
     cursor: pointer;
-    color: #f67e7d;
+    color: #4682bf;
 }
 
 .movetoRight1{
@@ -38,7 +38,7 @@ nav ul li :hover{
    
 }
 #logincolor{
-    color: #f67e7d;
+    color: #4682bf;
 }
 .picture {
     background-color: lightgray;

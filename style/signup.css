@@ -19,12 +19,12 @@ nav ul li {
 }
 
 nav ul li :hover{
-    color: #f67e7d;
+    color: #4682bf;
 }
 #bigname{
     font-size: 24pt;
     cursor: pointer;
-    color: #f67e7d;
+    color: #4682bf;
 }
 
 .movetoRight1{
@@ -38,7 +38,7 @@ nav ul li :hover{
    
 }
 #logincolor{
-    color: #f67e7d;
+    color: #4682bf;
 }
 
 
@@ -73,7 +73,7 @@ nav ul li :hover{
 .savebutton {
     width: 310px;
     height: 30px;
-    background-color: #f67e7d;
+    background-color: #4682bf;
     font-family: 'Courier New', Courier, monospace;
     /* border-radius: 10px; */
     cursor: pointer;
@@ -82,7 +82,7 @@ nav ul li :hover{
 
 #login{
     text-decoration: none;
-    color:  #f67e7d;
+    color:  #4682bf;
     font-size: bold;
 }
 
