@@ -1,6 +1,28 @@
-<?php 
-    session_start();
-    
+<?php
+       session_start();
+       $valid=0;
+       $_SESSION["error2"]=0;
+       if(isset($_POST['text']) && isset($_POST['pw']) ){
+           @$db= new mysqli('localhost', 'root','','webproject');
+           if(mysqli_connect_errno()){
+               echo "Error: couldn't connect to data base";
+               die();
+           }
+           $strQry='select * from userpage';
+           $res= $db -> query($strQry);
+           for($i=0; $i< $res -> num_rows ; $i++){
+               $row = $res -> fetch_array(); 
+               if($_POST['text']== $row[0] && $_POST['pw'] == $row[3] ){
+                  $valid=1;
+                  $_SESSION["login"]=1;
+                  header("location: index.html");
+               }
+           }
+           if($valid==0){
+               $_SESSION["error2"]=1;
+               
+           }
+       }
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +50,7 @@
 
         </nav>
     </div>
+    <form action="login.php" method="post">
     <div class="container"> 
         <h1 id="first">
             Log in
@@ -37,32 +60,28 @@
             as fast as possible 
          </p>
          <br>
-         <form action="testttt.php" method="post">
-            Email:
-            <br>
-            <input type="text" name="text" class="boxx" placeholder="   Enter email address" id ='username'>
-            <br>
-             <br>
-            Password:
-            <br>
-            <input type="password" name="pw" class="boxx" placeholder="   Enter your password" id = 'password'>
-            <br>
-            <br>
-            <br>
-            <input type = "submit" value = "amr">
-            <br>
-            <br> 
-            <p>
-                don't have an account?
-                <span><a href="signup.html" id="sign"> Sign up</a></span>
-            </p>
+         <form action="login.php" method="post">
+         Email:
+         <br>
+         <input type="text" name="text" class="boxx" placeholder="   Enter email address">
+         <br>
+         <br>
+         Password:
+         <br>
+         <input type="password" name="pw" class="boxx" placeholder="   Enter your password">
+         <br>
+         <br>
+         <br>
+         <input type="submit" id="log" value="Get Started">
+         <br>
+         <br> 
+         <p>
+            don't have an account?
+            <span><a href="signup.html" id="sign"> Sign up</a></span>
+         </p>
          </form>
     </div>
-  
+  </form>
 </body>
-
-<script>
-    document.getElementById('username').value = <?php echo $_SESSION["username"] ;?> ;
-    document.getElementById('password').value = <?php echo $_SESSION["password"] ;?> ;
-</script>
+<script>if(<?php echo $_SESSION["error2"]?> ==1)alert("Your user name or/and password is not correct"); </script>
 </html>
