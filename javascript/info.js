@@ -7,11 +7,12 @@ var node ;
 var text;
 document.getElementById('allcolors').innerText = '';
 for(let i = 0 ; i < colorarr.length;i++){
-
+    
     node = document.createElement('input'); //<input >
     node.type = 'radio' //<input type='radio' >
     node.name = 'colorbtns'
     node.id = 'radio'+colorarr[i];
+    
     document.getElementById('allcolors').appendChild(node);
 
     node = document.createElement('label');
@@ -23,7 +24,37 @@ for(let i = 0 ; i < colorarr.length;i++){
     document.getElementById('allcolors').appendChild(node);
     
 }
+document.getElementById('radio'+colorarr[0]).checked = true;
+//for size
 
+let size = document.getElementById('allsizes').innerText;
+sizearr = size.split(','); //all colors from database
+
+document.getElementById('allsizes').innerText = '';
+for(let i = 0 ; i < sizearr.length;i++){
+    
+    node = document.createElement('input'); //<input >
+    node.type = 'radio' //<input type='radio' >
+    node.name = 'sizebtns'
+    node.id = 'radio'+sizearr[i];
+    
+    document.getElementById('allsizes').appendChild(node);
+
+    node = document.createElement('label');
+    node.style.color = sizearr[i];
+    node.id = 'co'+sizearr[i];
+    node.style.paddingRight = '20px';
+    text = document.createTextNode(sizearr[i]);
+    node.appendChild(text)
+    document.getElementById('allsizes').appendChild(node);
+    
+}
+document.getElementById('radio'+sizearr[0]).checked = true;
+
+
+
+
+//end size
 let price = document.getElementById('totalprice').innerText;
     let pricearr = price.split(' ');
     pricearr[1] = pricearr[1].substring(1);
@@ -54,4 +85,24 @@ let lessItems = () =>{
     }
     
 }
+let colortype = '';
 
+function getColor(){
+    for(let i = 0 ; i < colorarr.length ;i++){
+        if(document.getElementById('radio'+colorarr[i]).checked){
+            return colorarr[i];
+        }
+        }
+}
+
+function quantity () {
+    return document.getElementById('labelnum').innerText;
+}
+
+function getSize(){
+    for(let i = 0 ; i < colorarr.length ;i++){
+        if(document.getElementById('radio'+sizearr[i]).checked){
+            return sizearr[i];
+        }
+        }
+}

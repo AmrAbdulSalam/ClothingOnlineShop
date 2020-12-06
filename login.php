@@ -1,5 +1,6 @@
 <?php
        session_start();
+       $_SESSION["login"]=0;
        $valid=0;
        $_SESSION["error2"]=0;
        if(isset($_POST['text']) && isset($_POST['pw']) ){
@@ -12,9 +13,10 @@
            $res= $db -> query($strQry);
            for($i=0; $i< $res -> num_rows ; $i++){
                $row = $res -> fetch_array(); 
-               if($_POST['text']== $row[0] && $_POST['pw'] == $row[3] ){
+               if($_POST['text']== $row[6] && $_POST['pw'] == $row[3] ){
                   $valid=1;
                   $_SESSION["login"]=1;
+                  $_SESSION["username"]=$row[6];
                   header("location: index.html");
                }
            }

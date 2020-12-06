@@ -1,7 +1,6 @@
 console.log('object')
 let hoverPicture = (imageId) => {
    document.getElementById(imageId).src = "./photos/menpage-photos/"+imageId+".png"; 
-       //document.getElementById(imageId).src = srce;
     document.getElementById(imageId).style.width="356px";
     document.getElementById(imageId).style.height="365px";
     
@@ -10,7 +9,6 @@ let hoverPicture = (imageId) => {
 
 let backToImage = (imageId) => {
     document.getElementById(imageId).src = "./photos/menpage-hover/"+imageId+".png";
-    //document.getElementById(imageId).src =src;
     document.getElementById(imageId).style.width="356px";
     document.getElementById(imageId).style.height="365px";
 }

@@ -6,13 +6,17 @@
 
     //selecting from database 
     $db = new mysqli('localhost' , 'root' , '' , 'webproject') ;
-
+    session_start();
     if(mysqli_connect_errno()){
         echo 'no connection to database';
     }
     $querystr = 'select * from '."$category".' where imgid='."$id";
     $result = $db -> query($querystr);
     $row = $result->fetch_assoc();
+
+    $_SESSION["price"] = $row['price'];
+    $_SESSION["productid"] = $row['imgid'];
+    $_SESSION["type"] = $category;
 
 ?>
 <!DOCTYPE html>
@@ -47,6 +51,7 @@
         <div class="bigpic">
             <img src=<?php echo $row['imgsrc']?> alt="firstpic" width ='500px' height = '600px'>
         </div>
+        
         <div class="info">
             <div class="para">
                 <p class = 'disc'>
@@ -55,7 +60,6 @@
             <br>
             <hr>
             </div>
-            
             <div class="price">
                 <span class = 'type'>Price</span> : <br>
                 <span class="result">
@@ -78,7 +82,7 @@
             <div class="size">
             <hr>
             <span class = 'type'>Size :</span><br>
-                <span class="result">
+                <span class="result" id ='allsizes'>
                     <?php echo $row['size']?>
                 </span>
             
@@ -92,8 +96,7 @@
                 <span class="result">
                     <i class="disabled red minus circle icon" id = 'minus' onclick='lessItems()'></i>
                 
-                    <label for="" id = 'labelnum'>1</label>
-                
+                    <label for="" id = 'labelnum' name ="test">1</label>
                     <i class="green plus circle icon" onclick='moreItems()'></i>
                 </span>
                 
@@ -104,9 +107,8 @@
             <hr>
             <span class = 'type'>Total :</span><br>
                 <span class="result" id = 'totalprice'>
-                    <?php echo $row['price']?>
+                   <label for="" name = "totalprice" id ="totalprice2"><?php echo $row['price']?></label>
                 </span>
-            
             </div>
 
             <div class="shipping">
@@ -114,17 +116,24 @@
             <span class = 'type'>Shipping :</span> <br>
                 <br>
                 <?php echo $row['shipping']?>
-                
             </div>
 
             <div class="submit">
-                <button>
-                    Buy Now
+                <!-- <input type="submit" value = "Buy now" onclick="welcome()"> -->
+                <a href="buynow.php" onclick="location.href=this.href+'?color='+getColor()+'&quantity='+quantity()+'&size='+getSize();return false;">
+               <button>
+                    Click HEre
                 </button>
+               </a>
             </div>
         </div>
     </div>
 </body>
-<script src="./javascript/info.js"></script>
+<script src="./javascript/info.js">
+    
+</script>
+<script>
 
+</script>
 </html>
+
