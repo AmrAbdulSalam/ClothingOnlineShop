@@ -229,7 +229,7 @@ nav ul li :hover{
 } */
 
 .intro{
-    background-image: url('C:/xampp/htdocs/WebProject2020/photos/backtest.jpg');
+    background-image: url('/backtest.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

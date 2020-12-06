@@ -8,8 +8,8 @@ var text;
 document.getElementById('allcolors').innerText = '';
 for(let i = 0 ; i < colorarr.length;i++){
 
-    node = document.createElement('input');
-    node.type = 'radio'
+    node = document.createElement('input'); //<input >
+    node.type = 'radio' //<input type='radio' >
     node.name = 'colorbtns'
     node.id = 'radio'+colorarr[i];
     document.getElementById('allcolors').appendChild(node);

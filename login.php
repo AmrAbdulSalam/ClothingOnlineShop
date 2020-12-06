@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,27 +37,32 @@
             as fast as possible 
          </p>
          <br>
-         Email:
-         <br>
-         <input type="text" name="text" class="boxx" placeholder="   Enter email address">
-         <br>
-         <br>
-         Password:
-         <br>
-         <input type="password" name="pw" class="boxx" placeholder="   Enter your password">
-         <br>
-         <br>
-         <br>
-         <button id="log">
-             GET STARTED
-         </button>
-         <br>
-         <br> 
-         <p>
-            don't have an account?
-            <span><a href="signup.html" id="sign"> Sign up</a></span>
-         </p>
+         <form action="testttt.php" method="post">
+            Email:
+            <br>
+            <input type="text" name="text" class="boxx" placeholder="   Enter email address" id ='username'>
+            <br>
+             <br>
+            Password:
+            <br>
+            <input type="password" name="pw" class="boxx" placeholder="   Enter your password" id = 'password'>
+            <br>
+            <br>
+            <br>
+            <input type = "submit" value = "amr">
+            <br>
+            <br> 
+            <p>
+                don't have an account?
+                <span><a href="signup.html" id="sign"> Sign up</a></span>
+            </p>
+         </form>
     </div>
   
 </body>
+
+<script>
+    document.getElementById('username').value = <?php echo $_SESSION["username"] ;?> ;
+    document.getElementById('password').value = <?php echo $_SESSION["password"] ;?> ;
+</script>
 </html>

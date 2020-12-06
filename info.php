@@ -1,7 +1,6 @@
 <?php 
-    if(isset($_GET['category'])  && isset($_GET['price']) && isset($_GET['id'])){
+    if(isset($_GET['category']) && isset($_GET['id'])){
         $category = $_GET['category'];
-        $price = $_GET['price'];
         $id = $_GET['id']; //to get from data base
     }
 
@@ -32,7 +31,7 @@
             <ul>
                 <span><b id = 'bigname'>ELEGANT</b></span>
                 <li><a href="index.html"><i class=" home icon"></i>Home</a></li>
-                <li><a href="#"><i class="male icon"></i>Men</a></li>
+                <li><a href="Men.html"><i class="male icon"></i>Men</a></li>
                 <li><a href="Women.html"><i class="female icon"></i>Women</a></li>
                 <li><a href="kids.html"> <i class="child icon"></i>Kids</a></li>
                 <li><a href="#"><i class="upload icon"></i>Upload Design</a></li>
@@ -61,7 +60,7 @@
                 <span class = 'type'>Price</span> : <br>
                 <span class="result">
                 <?php 
-                    echo $price;                
+                    echo $row['price'];  //US $15.40              
                 ?>
                 </span>
             
@@ -105,7 +104,7 @@
             <hr>
             <span class = 'type'>Total :</span><br>
                 <span class="result" id = 'totalprice'>
-                    <?php echo $price?>
+                    <?php echo $row['price']?>
                 </span>
             
             </div>

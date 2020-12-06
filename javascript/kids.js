@@ -1,12 +1,16 @@
-let hoverPicture = (imageSrc , imageId) => {
-    document.getElementById(imageId).src = "./photos/kidspage-photos/"+imageSrc+".png";
+console.log('object')
+let hoverPicture = (imageId) => {
+   document.getElementById(imageId).src = "./photos/menpage-photos/"+imageId+".png"; 
+       //document.getElementById(imageId).src = srce;
     document.getElementById(imageId).style.width="356px";
     document.getElementById(imageId).style.height="365px";
+    
 }
 
 
-let backToImage = (imageSrc , imageId) => {
-    document.getElementById(imageId).src = "./photos/kidspage-hover/"+imageSrc+".png";
+let backToImage = (imageId) => {
+    document.getElementById(imageId).src = "./photos/menpage-hover/"+imageId+".png";
+    //document.getElementById(imageId).src =src;
     document.getElementById(imageId).style.width="356px";
     document.getElementById(imageId).style.height="365px";
 }
