@@ -1,14 +1,18 @@
-let hoverPicture = (imageSrc,imageId) => {
-    document.getElementById(imageId).src = "./photos/menpage-photos/"+imageSrc+".png";
-    document.getElementById(imageId).style.width = "356px"
-    document.getElementById(imageId).style.height = "365px"
+console.log('object')
+let hoverPicture = (imageId) => {
+   document.getElementById(imageId).src = "./photos/kidspage-photos/"+imageId+".png"; 
+       //document.getElementById(imageId).src = srce;
+    document.getElementById(imageId).style.width="356px";
+    document.getElementById(imageId).style.height="365px";
+    
 }
 
 
-let backToImage = (imageSrc , imageId) => {
-    document.getElementById(imageId).src = "./photos/menpage-hover/"+imageSrc+".png";
-    document.getElementById(imageId).style.width = "356px"
-    document.getElementById(imageId).style.height = "365px"
+let backToImage = (imageId) => {
+    document.getElementById(imageId).src = "./photos/kidspage-hover/"+imageId+".png";
+    //document.getElementById(imageId).src =src;
+    document.getElementById(imageId).style.width="356px";
+    document.getElementById(imageId).style.height="365px";
 }
 
 document.querySelector('.secondpage').style.display = 'none'
@@ -50,3 +54,4 @@ let nextPage = (page) => {
     }
 
 }
+

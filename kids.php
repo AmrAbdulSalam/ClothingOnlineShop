@@ -4,7 +4,7 @@
     if(mysqli_connect_errno()){
         echo 'error connecting to the database';
     }
-    $category = 'mendatapage' ;
+    $category = 'kidsdatapage' ;
     $querystr = 'select * from '."$category";
     $result = $db -> query($querystr);
     $i = 0 ;
@@ -15,14 +15,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/men.css">
+    <link rel="stylesheet" href="./style/kids.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <title>Men || Fashion</title>
+    <title>Kids || Fashion</title>
 </head>
 <body>
     <div class="intro">
         <nav>
-                <ul>
+                 <ul>
                     <span><b id = 'bigname'>ELEGANT</b></span>
                     <li><a href="index.html"><i class=" home icon"></i>Home</a></li>
                     <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
@@ -58,7 +58,7 @@
 
 </body>
 
-<script src="./javascript/kids.js">
+<script src="./javascript/men.js">
 </script>
 
 <?php 
@@ -67,10 +67,10 @@
 <script>
     
     if(<?php echo $i ?> < 12 ){
-        document.getElementById("test1").insertAdjacentHTML("afterbegin", '<div class="column"> <a href="info.php?id=<?php echo $row["imgid"]?>&category=mendatapage"> <div class="ui fluid card"> <div class="image"> <img src=<?php echo $row["imgsrc"] ?> id = "<?php echo $row["imgid"]?>" onmouseover="backToImage(<?php echo $row["imgid"]?>)" onmouseout="hoverPicture(<?php echo $row["imgid"]?>)" style="height: 365px; width: 356px;" > </div> <div class="content"> <a class="header"><?php echo $row["title"]?></a> </div> <p class = "content"> <?php echo $row["info"]?> <br> <br> <span class="price"> <?php echo $row ["price"]?> </span> <br> <span class="shipping"> <?php echo $row["shipping"]?> </span> </p> </div> </a> </div>');
+        document.getElementById("test1").insertAdjacentHTML("afterbegin", '<div class="column"> <a href="info.php?id=<?php echo $row["imgid"]?>&category=kidsdatapage"> <div class="ui fluid card"> <div class="image"> <img src=<?php echo $row["imgsrc"] ?> id = "<?php echo $row["imgid"]?>" onmouseover="backToImage(<?php echo $row["imgid"]?>)" onmouseout="hoverPicture(<?php echo $row["imgid"]?>)" style="height: 365px; width: 356px;" > </div> <div class="content"> <a class="header"><?php echo $row["title"]?></a> </div> <p class = "content"> <?php echo $row["info"]?> <br> <br> <span class="price"> <?php echo $row ["price"]?> </span> <br> <span class="shipping"> <?php echo $row["shipping"]?> </span> </p> </div> </a> </div>');
     }
     else if (<?php echo $i ?> > 12  &&  <?php echo $i ?> < 24) {
-        document.getElementById("test2").insertAdjacentHTML("afterbegin", '<div class="column"> <a href="info.php?id=<?php echo $row["imgid"]?>&category=mendatapage"> <div class="ui fluid card"> <div class="image"> <img src=<?php echo $row["imgsrc"] ?> id = "<?php echo $row["imgid"]?>" onmouseover="backToImage(<?php echo $row["imgid"]?>)" onmouseout="hoverPicture(<?php echo $row["imgid"]?>)" style="height: 365px; width: 356px;" > </div> <div class="content"> <a class="header"><?php echo $row["title"]?></a> </div> <p class = "content"> <?php echo $row["info"]?> <br> <br> <span class="price"> <?php echo $row ["price"]?> </span> <br> <span class="shipping"> <?php echo $row["shipping"]?> </span> </p> </div> </a> </div>');
+        document.getElementById("test2").insertAdjacentHTML("afterbegin", '<div class="column"> <a href="info.php?id=<?php echo $row["imgid"]?>&category=kidsdatapage"> <div class="ui fluid card"> <div class="image"> <img src=<?php echo $row["imgsrc"] ?> id = "<?php echo $row["imgid"]?>" onmouseover="backToImage(<?php echo $row["imgid"]?>)" onmouseout="hoverPicture(<?php echo $row["imgid"]?>)" style="height: 365px; width: 356px;" > </div> <div class="content"> <a class="header"><?php echo $row["title"]?></a> </div> <p class = "content"> <?php echo $row["info"]?> <br> <br> <span class="price"> <?php echo $row ["price"]?> </span> <br> <span class="shipping"> <?php echo $row["shipping"]?> </span> </p> </div> </a> </div>');
     }
 </script>
 <?php 
@@ -80,6 +80,3 @@
 
 ?>
 </html>
-
-
-
