@@ -45,21 +45,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/buynow.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <title>BuyNow</title>
+    <title>Order || Fashion</title>
 </head>
 <body>
     <div class="intro">
         <nav>
-            <ul>
-                <span><b id = 'bigname'>ELEGANT</b></span>
-                <li><a href="index.html"><i class=" home icon"></i>Home</a></li>
-                <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
-                <li><a href="Women.html"><i class="female icon"></i>Women</a></li>
-                <li><a href="kids.html"> <i class="child icon"></i>Kids</a></li>
-                <li><a href="#"><i class="upload icon"></i>Upload Design</a></li>
-                <li class = 'movetoRight1'><a id = 'logincolor'href="login.php">Log in</a></li>
-                <li class = 'movetoRight2'><a href="signup.php">Sign up</a></li>
-            </ul>
+        <ul>
+                    <span><b id = 'bigname'>ELEGANT</b></span>
+                    <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
+                    <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
+                    <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
+                    <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
+                    <li><a href="test.php"><i class="upload icon"></i>Upload Design</a></li>
+                    <li class = 'movetoRight1'><a id = 'logincolor'href="login.php">Log in</a></li>
+                    <li class = 'movetoRight2'><a href="signup.php">Sign up</a></li>
+                </ul>
 
         </nav>
     </div>

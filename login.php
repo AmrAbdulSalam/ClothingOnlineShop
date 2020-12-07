@@ -17,7 +17,9 @@
                   $valid=1;
                   $_SESSION["login"]=1;
                   $_SESSION["username"]=$row[6];
-                  header("location: index.html");
+
+                  $_SESSION["firstname"] = $row[0];
+                  header("location: index.php");
                }
            }
            if($valid==0){
@@ -32,23 +34,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login || Elegant</title>
+    <title>Login || Fashion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="style/logincss.css">
 </head>
 <body>
     <div class="intro">
         <nav>
-            <ul>
-                <span><b id = 'bigname'>ELEGANT</b></span>
-                <li><a href="index.html"><i class=" home icon"></i>Home</a></li>
-                <li><a href="Men.html"><i class="male icon"></i>Men</a></li>
-                <li><a href="Women.html"><i class="female icon"></i>Women</a></li>
-                <li><a href="kids.html"> <i class="child icon"></i>Kids</a></li>
-                <li><a href="#"><i class="upload icon"></i>Upload Design</a></li>
-                <li class = 'movetoRight1'><a id = 'logincolor'href="login.html">Log in</a></li>
-                <li class = 'movetoRight2'><a href="signup.html">Sign up</a></li>
-            </ul>
+        <ul>
+                    <span><b id = 'bigname'>ELEGANT</b></span>
+                    <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
+                    <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
+                    <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
+                    <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
+                    <li><a href="test.php"><i class="upload icon"></i>Upload Design</a></li>
+                    <li class = 'movetoRight1'><a id = 'logincolor'href="login.php">Log in</a></li>
+                    <li class = 'movetoRight2'><a href="signup.php">Sign up</a></li>
+                </ul>
 
         </nav>
     </div>
@@ -63,9 +65,9 @@
          </p>
          <br>
          <form action="login.php" method="post">
-         Email:
+         Username :
          <br>
-         <input type="text" name="text" class="boxx" placeholder="   Enter email address">
+         <input type="text" name="text" class="boxx" placeholder="   Enter username">
          <br>
          <br>
          Password:
@@ -79,7 +81,7 @@
          <br> 
          <p>
             don't have an account?
-            <span><a href="signup.html" id="sign"> Sign up</a></span>
+            <span><a href="signup.php" id="sign"> Sign up</a></span>
          </p>
          </form>
     </div>

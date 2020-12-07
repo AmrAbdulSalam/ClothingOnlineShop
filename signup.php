@@ -120,7 +120,7 @@
                     <input type="submit" value="Sign up" class = 'savebutton'> <br>
                 </div>
                 <p>
-                    Have an account ? <span ><a href="login.html" id="login">Login</a></span>
+                    Have an account ? <span ><a href="login.php" id="login">Login</a></span>
                 </p>
                 </form>
             </div>
