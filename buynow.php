@@ -10,6 +10,26 @@
         header("Location:login.php");
     }
 
+    if(isset( $_SESSION["login"])){
+        if( $_SESSION["login"] == 1){
+            echo '<div class="intro">
+            <nav>
+                <ul>
+                    <span><b id = "bigname">ELEGANT</b></span>
+                    <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
+                    <li><a href="#"><i class="male icon"></i>Men</a></li>
+                    <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
+                    <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
+                    <li><a href="#"><i class="upload icon"></i>Upload Design</a></li>
+                    <li class = "movetoRight1"><a id = "logincolor"href="login.php?logout=true" >Log out</a></li>
+                    <li class = "movetoRight2"><a href="#">'.$_SESSION['username'].'</a></li>
+                </ul>
+    
+            </nav>
+        </div>' ;
+        }
+    }
+
     if(isset($_POST["submit"])){
        //inserting to database;
 
@@ -48,21 +68,24 @@
     <title>Order || Fashion</title>
 </head>
 <body>
-    <div class="intro">
-        <nav>
-        <ul>
-                    <span><b id = 'bigname'>ELEGANT</b></span>
+<?php 
+        if(!isset($_SESSION["login"]) || $_SESSION["login"] == 0){
+            echo '<div class="intro">
+            <nav>
+                <ul>
+                    <span><b id = "bigname">ELEGANT</b></span>
                     <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
                     <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
                     <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
                     <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
-                    <li><a href="test.php"><i class="upload icon"></i>Upload Design</a></li>
-                    <li class = 'movetoRight1'><a id = 'logincolor'href="login.php">Log in</a></li>
-                    <li class = 'movetoRight2'><a href="signup.php">Sign up</a></li>
+                    <li class = "movetoRight1"><a id = "logincolor"href="login.php">Log in</a></li>
+                    <li class = "movetoRight2"><a href="signup.php">Sign up</a></li>
                 </ul>
-
-        </nav>
-    </div>
+    
+            </nav>
+        </div>' ;
+        }    
+        ?>
     <div class="informationform">
         <form action="buynow.php" method ="post">
                     <div class="info">

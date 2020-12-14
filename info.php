@@ -6,18 +6,38 @@
 
     //selecting from database 
     $db = new mysqli('localhost' , 'root' , '' , 'webproject') ;
-    session_start();
+    
     if(mysqli_connect_errno()){
         echo 'no connection to database';
     }
     $querystr = 'select * from '."$category".' where imgid='."$id";
     $result = $db -> query($querystr);
     $row = $result->fetch_assoc();
-
+    session_start();
     $_SESSION["price"] = $row['price'];
     $_SESSION["productid"] = $row['imgid'];
     $_SESSION["type"] = $category;
 
+
+    if(isset( $_SESSION["login"])){
+        if( $_SESSION["login"] == 1){
+            echo '<div class="intro">
+            <nav>
+                <ul>
+                    <span><b id = "bigname">ELEGANT</b></span>
+                    <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
+                    <li><a href="#"><i class="male icon"></i>Men</a></li>
+                    <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
+                    <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
+                    <li><a href="#"><i class="upload icon"></i>Upload Design</a></li>
+                    <li class = "movetoRight1"><a id = "logincolor"href="login.php?logout=true" >Log out</a></li>
+                    <li class = "movetoRight2"><a href="#">'.$_SESSION['username'].'</a></li>
+                </ul>
+    
+            </nav>
+        </div>' ;
+        }
+    }
     
 ?>
 <!DOCTYPE html>
@@ -31,21 +51,25 @@
 </head>
 <body>
 
-<div class="intro">
-<nav>
-        <ul>
-                    <span><b id = 'bigname'>ELEGANT</b></span>
+    <?php 
+        if(!isset($_SESSION["login"]) || $_SESSION["login"] == 0){
+            echo '<div class="intro">
+            <nav>
+                <ul>
+                    <span><b id = "bigname">ELEGANT</b></span>
                     <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
                     <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
                     <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
                     <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
-                    <li><a href="test.php"><i class="upload icon"></i>Upload Design</a></li>
-                    <li class = 'movetoRight1'><a id = 'logincolor'href="login.php">Log in</a></li>
-                    <li class = 'movetoRight2'><a href="signup.php">Sign up</a></li>
+                    <li class = "movetoRight1"><a id = "logincolor"href="login.php">Log in</a></li>
+                    <li class = "movetoRight2"><a href="signup.php">Sign up</a></li>
                 </ul>
+    
+            </nav>
+        </div>' ;
+        }    
+        ?>
 
-        </nav>
-</div>
 
     <div class="container">
         <div class="bigpic">
@@ -120,9 +144,9 @@
 
             <div class="submit">
                 <!-- <input type="submit" value = "Buy now" onclick="welcome()"> -->
-                <a href="buynow.php" onclick="location.href=this.href+'?color='+getColor()+'&quantity='+quantity()+'&size='+getSize();return false;">
-               <button>
-                    Click HEre
+                <a href="buynow.php" class="submit" onclick="location.href=this.href+'?color='+getColor()+'&quantity='+quantity()+'&size='+getSize();return false;">
+               <button id = 'buybut'>
+                    Buy Now 
                 </button>
                </a>
             </div>

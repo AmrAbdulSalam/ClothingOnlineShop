@@ -1,6 +1,10 @@
 <?php
        session_start();
-       $_SESSION["login"]=0;
+       if(isset($_GET['logout'])){
+           if($_GET['logout'] == 'true'){
+               session_destroy();
+           }
+       }
        $valid=0;
        $_SESSION["error2"]=0;
        if(isset($_POST['text']) && isset($_POST['pw']) ){
@@ -14,13 +18,19 @@
            for($i=0; $i< $res -> num_rows ; $i++){
                $row = $res -> fetch_array(); 
                if($_POST['text']== $row[6] && $_POST['pw'] == $row[3] ){
+                if($row[6] == "admin" && $row[3] == "admin"){
+                    $_SESSION['admin'] = 1;
+                    header("location: chartadmin.php");
+                }else{
                   $valid=1;
                   $_SESSION["login"]=1;
                   $_SESSION["username"]=$row[6];
 
                   $_SESSION["firstname"] = $row[0];
                   header("location: index.php");
+                }
                }
+               
            }
            if($valid==0){
                $_SESSION["error2"]=1;

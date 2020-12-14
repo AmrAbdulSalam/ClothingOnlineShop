@@ -1,5 +1,58 @@
 <?php 
+    // session_start();
+    // if(isset($_SESSION['admin'])){
+    //     if($_SESSION['admin'] == 1){
+    //         $_SESSION['admin'] = 0;
+    //     }
+    // }
+
     session_start();
+    if(isset( $_SESSION["login"])){
+        if( $_SESSION["login"] == 1){
+    echo '<div class="intro" style="background-image: url(backtest.jpg);">
+    <nav>
+        <ul>
+            <span><b id = "bigname">ELEGANT</b></span>
+            <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
+            <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
+            <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
+            <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
+            <li><a href="test.php"><i class="upload icon"></i>Upload Design</a></li>
+            <li class = "movetoRight1"><a id = "logincolor"href="login.php?logout=true" >Log out</a></li>
+            <li class = "movetoRight2"><a href="#">'.$_SESSION['username'].'</a></li>
+
+        </ul>
+
+    </nav>
+    <div class="firstinfo">
+       
+        <div class="talking">
+            <h1>
+                People will stare.
+                <br> Make it worth their while.
+            </h1>
+            <p> 
+                Humor is a big part of my style. You have to be willing to fall on your face a bit, <br>
+                 to be that fashion roadkill. <br>
+                I know so many people who are die-hard  <br> fashion people who are way more educated than I am .
+                
+            </p>
+
+            <button id ="firstbut">
+                Explore Us
+            </button>
+            <button id = "secondbut" onclick="jumpOffer()">
+                Offers
+            </button>
+        </div>
+        
+    </div>
+   
+    
+
+</div>';
+        }}
+  
     
 ?>
 
@@ -18,19 +71,22 @@
 </head>
 <body>
     <div class="container">
-        <div class="intro" style="background-image: url('backtest.jpg');">
+    <?php 
+        if(!isset($_SESSION["login"]) || $_SESSION["login"] == 0){
+            echo '<div class="intro" style="background-image: url(backtest.jpg);">
             <nav>
                 <ul>
-                    <span><b id = 'bigname'>ELEGANT</b></span>
+                    <span><b id = "bigname">ELEGANT</b></span>
                     <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
                     <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
                     <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
                     <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
-                    <li><a href="test.php"><i class="upload icon"></i>Upload Design</a></li>
-                    <li class = 'movetoRight1'><a id = 'logincolor'href="login.php">Log in</a></li>
-                    <li class = 'movetoRight2'><a href="signup.php">Sign up</a></li>
+                    
+                    <li class = "movetoRight1"><a id = "logincolor"href="login.php">Log in</a></li>
+                    <li class = "movetoRight2"><a href="signup.php">Sign up</a></li>
+        
                 </ul>
-    
+        
             </nav>
             <div class="firstinfo">
                
@@ -45,11 +101,11 @@
                         I know so many people who are die-hard  <br> fashion people who are way more educated than I am .
                         
                     </p>
-    
-                    <button id ='firstbut'>
+        
+                    <button id ="firstbut">
                         Explore Us
                     </button>
-                    <button id = 'secondbut' onclick="jumpOffer()">
+                    <button id = "secondbut" onclick="jumpOffer()">
                         Offers
                     </button>
                 </div>
@@ -57,8 +113,10 @@
             </div>
            
             
-
-        </div>
+        
+            </div>';
+        }    
+        ?>
         
 
         <div class="offers">
@@ -71,16 +129,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count1')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count1'>
-                          0
-                        </a>
-                      </div>
-                </div>
+               
                 <p>
                     <span style="color: red;" class="spanprice"> $ 90 </span> <span class="spanprice" style="text-decoration: line-through;">$300 </span>
                 </p>
@@ -95,16 +144,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count2')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count2'>
-                          0
-                        </a>
-                      </div>
-                </div>
+                
                 <p>
                     <span style="color: red;" class="spanprice"> $ 590 </span> <span class="spanprice" style="text-decoration: line-through;">$750 </span>
                 </p>
@@ -118,16 +158,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count3')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count3'>
-                          0
-                        </a>
-                      </div>
-                </div>
+               
                 <p>
                     <span style="color: red;" class="spanprice"> $ 810 </span> <span class="spanprice" style="text-decoration: line-through;">$1400 </span>
                 </p>
@@ -141,16 +172,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count4')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count4'>
-                          0
-                        </a>
-                      </div>
-                </div>
+               
                 <p>
                     <span style="color: red;" class="spanprice"> $ 5040 </span> <span class="spanprice" style="text-decoration: line-through;">$6900 </span>
                 </p>
@@ -164,16 +186,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count5')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count5'>
-                          0
-                        </a>
-                      </div>
-                </div>
+                
                 <p>
                     <span style="color: red;" class="spanprice"> $ 210 </span> <span class="spanprice" style="text-decoration: line-through;">$510 </span>
                 </p>
@@ -187,16 +200,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count6')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count6'>
-                          0
-                        </a>
-                      </div>
-                </div>
+               
                 <p>
                     <span style="color: red;" class="spanprice"> $ 320 </span> <span class="spanprice" style="text-decoration: line-through;">$610 </span>
                 </p>
@@ -210,16 +214,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count7')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count7'>
-                          0
-                        </a>
-                      </div>
-                </div>
+               
                 <p>
                     <span style="color: red;" class="spanprice"> $ 875 </span> <span class="spanprice" style="text-decoration: line-through;">$1000 </span>
                 </p>
@@ -233,16 +228,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count8')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count8'>
-                          0
-                        </a>
-                      </div>
-                </div>
+                
                 <p>
                     <span style="color: red;" class="spanprice"> $ 25 </span> <span class="spanprice" style="text-decoration: line-through;">$100</span>
                 </p>
@@ -256,16 +242,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count9')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count9'>
-                          0
-                        </a>
-                      </div>
-                </div>
+                
                 <p>
                     <span style="color: red;" class="spanprice"> $ 750 </span> <span class="spanprice" style="text-decoration: line-through;">$1220 </span>
                 </p>
@@ -279,16 +256,7 @@
                     Outfit is made of leather <br>
                      also was designed by lacci afraio.
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count10')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count10'>
-                          0
-                        </a>
-                      </div>
-                </div>
+              
                 <p>
                     <span style="color: red;" class="spanprice"> $ 128 </span> <span class="spanprice" style="text-decoration: line-through;">$400 </span>
                 </p>
@@ -308,17 +276,7 @@
                     Glitter gloden Choker switch <br>
                        - Gold
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="liked('liked')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <!-- <a class="ui basic red left pointing label" id = 'count11'>
-                          0
-                        </a> --> 
-                        <span class="liked">Liked</span>
-                      </div>
-                </div>
+                
                 <p>
                     <span style="color: red;" class="spanprice"> $ 200 </span> <span class="spanprice" style="text-decoration: line-through;">$450 </span>
                 </p>
@@ -332,16 +290,7 @@
                     Glitter gloden Choker necklace <br>
                        - Gold
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count12')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count12'>
-                          0
-                        </a>
-                      </div>
-                </div>
+               
                 <p>
                     <span style="color: red;" class="spanprice"> $ 150 </span> <span class="spanprice" style="text-decoration: line-through;">$345 </span>
                 </p>
@@ -355,16 +304,7 @@
                     Glitter black Choker bag <br>
                        - Black
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count13')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count13'>
-                          0
-                        </a>
-                      </div>
-                </div>
+               
                 <p>
                     <span style="color: red;" class="spanprice"> $ 850 </span> <span class="spanprice" style="text-decoration: line-through;">$1000 </span>
                 </p>
@@ -378,16 +318,7 @@
                     Glitter Silver Choker earring <br>
                        - Silver
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count14')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count14'>
-                          0
-                        </a>
-                      </div>
-                </div>
+                
                 <p>
                     <span style="color: red;" class="spanprice"> $ 150 </span> <span class="spanprice" style="text-decoration: line-through;">$200 </span>
                 </p>
@@ -401,16 +332,7 @@
                     Party Accessories for men <br>
                        - Brown and Black
                 </p>
-                <div class="lovecounter">
-                    <div class="ui labeled button" tabindex="0" onclick="addOneLike('count15')">
-                        <div class="ui red button">
-                          <i class="heart icon"></i> Like
-                        </div>
-                        <a class="ui basic red left pointing label" id = 'count15'>
-                          0
-                        </a>
-                      </div>
-                </div>
+                
                 <p>
                     <span style="color: red;" class="spanprice"> $ 50 </span> <span class="spanprice" style="text-decoration: line-through;">$110 </span>
                 </p>

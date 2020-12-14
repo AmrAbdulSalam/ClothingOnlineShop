@@ -1,4 +1,3 @@
-document.querySelector(".liked").style.visibility="hidden";
 
 var myIndex = 0;
 carousel();
