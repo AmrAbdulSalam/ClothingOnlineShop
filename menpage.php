@@ -20,10 +20,10 @@
                 <ul>
                     <span><b id = "bigname">ELEGANT</b></span>
                     <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
-                    <li><a href="#"><i class="male icon"></i>Men</a></li>
+                    <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
                     <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
                     <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
-                    <li><a href="#"><i class="upload icon"></i>Upload Design</a></li>
+                    <li><a href="items.php"><i class="shopping cart icon"></i>Items</i></a></li>
                     <li class = "movetoRight1"><a id = "logincolor"href="login.php?logout=true" >Log out</a></li>
                     <li class = "movetoRight2"><a href="#">'.$_SESSION['username'].'</a></li>
                 </ul>

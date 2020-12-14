@@ -54,7 +54,6 @@
                 <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
                 <li><a href="Women.html"><i class="female icon"></i>Women</a></li>
                 <li><a href="kids.html"> <i class="child icon"></i>Kids</a></li>
-                <li><a href="#"><i class="upload icon"></i>Upload Design</a></li>
                 <li class = 'movetoRight1'><a id = 'logincolor'href="login.html">Log in</a></li>
                 <li class = 'movetoRight2'><a href="signup.html">Sign up</a></li>
             </ul>
