@@ -20,9 +20,7 @@
             <li><a href="items.php"><i class="shopping cart icon"></i>Items</i></a></li>
             <li class = "movetoRight1"><a id = "logincolor"href="login.php?logout=true" >Log out</a></li>
             <li class = "movetoRight2"><a href="#">'.$_SESSION['username'].'</a></li>
-
         </ul>
-
     </nav>
     <div class="firstinfo">
        
@@ -37,7 +35,6 @@
                 I know so many people who are die-hard  <br> fashion people who are way more educated than I am .
                 
             </p>
-
             <button id ="firstbut">
                 Explore Us
             </button>
@@ -49,7 +46,6 @@
     </div>
    
     
-
 </div>';
         }}
   
@@ -102,7 +98,7 @@
                         
                     </p>
         
-                    <button id ="firstbut">
+                    <button id ="firstbut" >
                         Explore Us
                     </button>
                     <button id = "secondbut" onclick="jumpOffer()">
@@ -121,7 +117,8 @@
 
         <div class="offers">
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/1.jpg" alt="firstimg">
+              <a href="info.php?id=<?php echo 4001?>&category=offers">
+                <img src="./photos/outfits-offers/4001.png" alt="firstimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -136,7 +133,8 @@
                 
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/3.jpg" alt="thirdimg">
+               <a href="info.php?id=<?php echo 4002?>&category=offers">
+                <img src="./photos/outfits-offers/4002.png" alt="thirdimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -150,7 +148,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/2.jpg" alt="secondimg">
+            <a href="info.php?id=<?php echo 4003?>&category=offers">
+                <img src="./photos/outfits-offers/4003.png" alt="secondimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -164,7 +163,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/4.jpg" alt="fourthimg">
+            <a href="info.php?id=<?php echo 4004?>&category=offers">
+                <img src="./photos/outfits-offers/4004.png" alt="fourthimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -178,7 +178,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/7.jpeg" alt="fourthimg">
+            <a href="info.php?id=<?php echo 4005?>&category=offers">
+                <img src="./photos/outfits-offers/4005.png" alt="fourthimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -192,7 +193,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/12.jpeg" alt="fourthimg">
+            <a href="info.php?id=<?php echo 4006?>&category=offers">
+                <img src="./photos/outfits-offers/4006.png" alt="fourthimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -206,7 +208,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/5.jpg" alt="fourthimg">
+            <a href="info.php?id=<?php echo 4007?>&category=offers">
+                <img src="./photos/outfits-offers/4007.png" alt="fourthimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -220,7 +223,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/11.webp" alt="fourthimg">
+            <a href="info.php?id=<?php echo 4008?>&category=offers">
+                <img src="./photos/outfits-offers/4008.png" alt="fourthimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -234,7 +238,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/9.jpg" alt="fourthimg">
+            <a href="info.php?id=<?php echo 4009?>&category=offers">
+                <img src="./photos/outfits-offers/4009.png" alt="fourthimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -248,7 +253,8 @@
                 </p>
             </div>
             <div class="imgoffer">
-                <img src="./photos/outfits-offers/8.jpeg" alt="fourthimg">
+                <a href="info.php?id=<?php echo 4010?>&category=offers">
+                <img src="./photos/outfits-offers/4010.png" alt="fourthimg">
                 <h4>
                     Gucci Outfit
                 </h4>
@@ -261,14 +267,45 @@
                     <span style="color: red;" class="spanprice"> $ 128 </span> <span class="spanprice" style="text-decoration: line-through;">$400 </span>
                 </p>
             </div>
-           
+            <!--  -->
+            <div class="imgoffer">
+                <a href="info.php?id=<?php echo 4011?>&category=offers">
+                <img src="./photos/outfits-offers/4011.png" alt="fourthimg">
+                <h4>
+                    Gucci Outfit
+                </h4>
+                <p class="offertitle">
+                    Outfit is made of leather <br>
+                     also was designed by lacci afraio.
+                </p>
+              
+                <p>
+                    <span style="color: red;" class="spanprice"> $ 150 </span> <span class="spanprice" style="text-decoration: line-through;">$400 </span>
+                </p>
+            </div>
+            <div class="imgoffer">
+                <a href="info.php?id=<?php echo 4012?>&category=offers">
+                <img src="./photos/outfits-offers/4012.png" alt="fourthimg">
+                <h4>
+                    Gucci Outfit
+                </h4>
+                <p class="offertitle">
+                    Outfit is made of leather <br>
+                     also was designed by lacci afraio.
+                </p>
+              
+                <p>
+                    <span style="color: red;" class="spanprice"> $ 700 </span> <span class="spanprice" style="text-decoration: line-through;">$400 </span>
+                </p>
+            </div>
            
         </div>
 
 
         <div class="outfit">
             <div class="imgaccessor">
-                <img src="./photos/Accessories/switch.jpg">
+                <a href="info.php?id=<?php echo 3001?>&category=Accessories">
+                <img src="./photos/Accessories/3001.png">
                 <h4>
                     Dior
                 </h4>
@@ -282,7 +319,8 @@
                 </p>
             </div>
             <div class="imgaccessor">
-                <img src="./photos/Accessories/necklace.jpg">
+            <a href="info.php?id=<?php echo 3002?>&category=Accessories">
+                <img src="./photos/Accessories/3002.png">
                 <h4>
                     Versace
                 </h4>
@@ -296,7 +334,8 @@
                 </p>
             </div>
             <div class="imgaccessor">
-                <img src="./photos/Accessories/bag.jpg">
+                <a href="info.php?id=<?php echo 3003?>&category=Accessories">
+                <img src="./photos/Accessories/3003.png">
                 <h4>
                     Falabella
                 </h4>
@@ -310,7 +349,8 @@
                 </p>
             </div>
             <div class="imgaccessor">
-                <img src="./photos/Accessories/earring.jpg">
+               <a href="info.php?id=<?php echo 3004?>&category=Accessories">
+                <img src="./photos/Accessories/3004.png">
                 <h4>
                     Channel
                 </h4>
@@ -324,7 +364,8 @@
                 </p>
             </div>
             <div class="imgaccessor">
-                <img src="./photos/Accessories/partAccess.jpg">
+                <a href="info.php?id=<?php echo 3005?>&category=Accessories">
+                <img src="./photos/Accessories/3005.png">
                 <h4>
                     Native Union
                 </h4>
@@ -335,6 +376,21 @@
                 
                 <p>
                     <span style="color: red;" class="spanprice"> $ 50 </span> <span class="spanprice" style="text-decoration: line-through;">$110 </span>
+                </p>
+            </div>
+            <!--  -->
+            <div class="imgaccessor">
+                <img src="./photos/Accessories/3006.png">
+                <h4>
+                    Gucci Glasses
+                </h4>
+                <p class="accesstitle">
+                    Glasses for men <br>
+                       - Brown and Black
+                </p>
+                
+                <p>
+                    <span style="color: red;" class="spanprice"> $ 100 </span> <span class="spanprice" style="text-decoration: line-through;">$200 </span>
                 </p>
             </div>
         </div>

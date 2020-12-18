@@ -70,3 +70,11 @@ nav ul li :hover{
 #first{
     color:#4682bf ;
 }
+.cont{
+    display: flex;
+    flex-direction: row;
+
+}
+.second{
+    margin-left : 400px
+}

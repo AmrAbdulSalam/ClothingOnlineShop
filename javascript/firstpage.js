@@ -20,9 +20,14 @@ function liked(x){
 }
 
 let jumpOffer = () =>{
+
     document.querySelector('.offers').scrollIntoView();
 }
 // for counting likes in each offers
 let addOneLike = (x) => {
   document.getElementById(x).innerText = Number(document.getElementById(x).innerText) + 1;
 }
+
+document.getElementById("firstbut").onclick = function () {
+  location.href = "signup.php";
+};

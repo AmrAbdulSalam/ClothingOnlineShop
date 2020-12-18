@@ -20,7 +20,7 @@
                if($_POST['text']== $row[6] && $_POST['pw'] == $row[3] ){
                 if($row[6] == "admin" && $row[3] == "admin"){
                     $_SESSION['admin'] = 1;
-                    header("location: chartadmin.php");
+                    header("location:chartadmin.php");
                 }else{
                   $valid=1;
                   $_SESSION["login"]=1;
@@ -64,38 +64,45 @@
 
         </nav>
     </div>
-    <form action="login.php" method="post">
-    <div class="container"> 
-        <h1 id="first">
-            Log in
-        </h1>
-        <p> 
-            Do you love online shopping? Please login <br>
-            as fast as possible 
-         </p>
-         <br>
-         <form action="login.php" method="post">
-         Username :
-         <br>
-         <input type="text" name="text" class="boxx" placeholder="   Enter username">
-         <br>
-         <br>
-         Password:
-         <br>
-         <input type="password" name="pw" class="boxx" placeholder="   Enter your password">
-         <br>
-         <br>
-         <br>
-         <input type="submit" id="log" value="Get Started">
-         <br>
-         <br> 
-         <p>
-            don't have an account?
-            <span><a href="signup.php" id="sign"> Sign up</a></span>
-         </p>
-         </form>
+    <div class="cont">
+       <div class="first">
+       <form action="login.php" method="post">
+            <div class="container"> 
+                <h1 id="first">
+                    Log in
+                </h1>
+                <p> 
+                    Do you love online shopping? Please login <br>
+                    as fast as possible 
+                </p>
+                <br>
+                <form action="login.php" method="post">
+                Username :
+                <br>
+                <input type="text" name="text" class="boxx" placeholder="   Enter username">
+                <br>
+                <br>
+                Password:
+                <br>
+                <input type="password" name="pw" class="boxx" placeholder="   Enter your password">
+                <br>
+                <br>
+                <br>
+                <input type="submit" id="log" value="Get Started">
+                <br>
+                <br> 
+                <p>
+                    don't have an account?
+                    <span><a href="signup.php" id="sign"> Sign up</a></span>
+                </p>
+                </form>
+            </div>
+        </form>
+       </div>
+       <div class="second">
+        <img src="./photos/login.jpg" alt="">
+       </div>
     </div>
-  </form>
 </body>
 <script>if(<?php echo $_SESSION["error2"]?> ==1)alert("Your user name or/and password is not correct"); </script>
 </html>

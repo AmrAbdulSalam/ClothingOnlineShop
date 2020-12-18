@@ -50,12 +50,12 @@
         <nav>
             <ul>
                 <span><b id = 'bigname'>ELEGANT</b></span>
-                <li><a href="index.html"><i class=" home icon"></i>Home</a></li>
+                <li><a href="index.php"><i class=" home icon"></i>Home</a></li>
                 <li><a href="menpage.php"><i class="male icon"></i>Men</a></li>
-                <li><a href="Women.html"><i class="female icon"></i>Women</a></li>
-                <li><a href="kids.html"> <i class="child icon"></i>Kids</a></li>
-                <li class = 'movetoRight1'><a id = 'logincolor'href="login.html">Log in</a></li>
-                <li class = 'movetoRight2'><a href="signup.html">Sign up</a></li>
+                <li><a href="Women.php"><i class="female icon"></i>Women</a></li>
+                <li><a href="kids.php"> <i class="child icon"></i>Kids</a></li>
+                <li class = 'movetoRight1'><a id = 'logincolor'href="login.php">Log in</a></li>
+                <li class = 'movetoRight2'><a href="signup.php">Sign up</a></li>
             </ul>
 
         </nav>

@@ -1,7 +1,7 @@
 <?php
     session_start();
     if($_SESSION['admin'] != 1){
-        header("location: info.php");
+        header("location: index.php");
     }
 
     

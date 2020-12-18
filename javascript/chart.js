@@ -11,7 +11,7 @@ colorsforbackground = [
 
 $(document).ready(function (){
     $.ajax({
-        url : "http://localhost/graphswebsite/nationalcode.php",
+        url : "http://localhost/WebProject2020/charts/nationalcode.php",
         method : "GET" , 
         success : function(info){
             info = info.substring(3,info.length-1);
@@ -57,7 +57,7 @@ $(document).ready(function (){
 
 $(document).ready(function(){
     $.ajax({
-        url : "http://localhost/graphswebsite/colors.php",
+        url : "http://localhost/WebProject2020/charts/colors.php",
         post : "GET",
         success : function (info){
             console.log(info)
@@ -111,7 +111,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $.ajax({
-        url : "http://localhost/graphswebsite/size.php",
+        url : "http://localhost/WebProject2020/charts/size.php",
         method : "GET" ,
         success : function (info){
 
@@ -152,7 +152,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $.ajax({
-        url : "http://localhost/graphswebsite/salespermonth.php",
+        url : "http://localhost/WebProject2020/charts/salespermonth.php",
         method : "GET" ,
         success : function (info){
             info = info.substring(3,info.length-1);

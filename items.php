@@ -86,7 +86,7 @@
         $menquer = $menquer -> fetch_assoc();
 ?>
 <script>
-    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $menquer['imgsrc']?>> <div class='header'> <?php echo $menquer['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $menquer['info']?>></div> </div> <div class='extra content'> <div class='ui two buttons'><a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <button class='ui basic red button'> Decline </button></a> </div> </div> </div>");
+    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $menquer['imgsrc']?>> <div class='header'> <?php echo $menquer['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $menquer['info']?></div> </div> <div class='extra content'> <div class='ui two buttons'><a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <div class='ui animated white button' tabindex='0'><div class='visible content'>Decline</div><div class='hidden content'><i class='trash icon'></i></div></div></a> </div> </div> </div>");
 </script>
 <?php 
     }
@@ -97,7 +97,7 @@
 
 ?>
 <script>
-    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $womendata['imgsrc']?>> <div class='header'> <?php echo $womendata['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $womendata['info']?>></div> </div> <div class='extra content'> <div class='ui two buttons'> <a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <button class='ui basic red button'> Decline </button></a> </div> </div> </div>");
+    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $womendata['imgsrc']?>> <div class='header'> <?php echo $womendata['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $womendata['info']?> </div> </div> <div class='extra content'> <div class='ui two buttons'> <a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <div class='ui animated white button' tabindex='0'><div class='visible content'>Decline</div><div class='hidden content'><i class='trash icon'></i></div></div> </a> </div> </div> </div>");
 </script>
 <?php 
     }
@@ -108,7 +108,30 @@
 
 ?>
 <script>
-    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $kidsda['imgsrc']?>> <div class='header'> <?php echo $kidsda['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $kidsda['info']?>></div> </div> <div class='extra content'> <div class='ui two buttons'> <a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <button class='ui basic red button'> Decline </button></a> </div> </div> </div>");
+    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $kidsda['imgsrc']?>> <div class='header'> <?php echo $kidsda['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $kidsda['info']?></div> </div> <div class='extra content'> <div class='ui two buttons'> <a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <div class='ui animated white button' tabindex='0'><div class='visible content'>Decline</div><div class='hidden content'><i class='trash icon'></i></div></div></a> </div> </div> </div>");
+</script>
+<?php 
+    }
+    if($cat == 4){ 
+        $str = "select info , imgsrc , title from offers where imgid = '$pro'";
+        $offers = $db->query($str);
+        $offers = $offers -> fetch_assoc();
+
+?>
+
+<script>
+    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $offers['imgsrc']?>> <div class='header'> <?php echo $offers['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $offers['info']?></div> </div> <div class='extra content'> <div class='ui two buttons'> <a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <div class='ui animated white button' tabindex='0'><div class='visible content'>Decline</div><div class='hidden content'><i class='trash icon'></i></div></div></a> </div> </div> </div>");
+</script>
+
+<?php 
+    }
+    if($cat == 3){ 
+        $str = "select info , imgsrc , title from accessories where imgid = '$pro'";
+        $accse = $db->query($str);
+        $accse = $accse -> fetch_assoc();
+?>
+<script>
+    document.getElementById('items').insertAdjacentHTML('afterbegin', "<div class='card'> <div class='content'> <img class='right floated mini ui image' src=<?php echo $accse['imgsrc']?>> <div class='header'> <?php echo $accse['title']?></div> <div class='meta'> <?php echo $row['date']?></div> <div class='description'> <?php echo $accse['info']?></div> </div> <div class='extra content'> <div class='ui two buttons'> <a href = 'items.php?id=<?php echo $pro?> &date=<?php echo $row['date']?> '> <div class='ui animated white button' tabindex='0'><div class='visible content'>Decline</div><div class='hidden content'><i class='trash icon'></i></div></div></a> </div> </div> </div>");
 </script>
 <?php 
     }
