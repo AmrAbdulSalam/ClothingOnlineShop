@@ -93,7 +93,9 @@
                 <br> 
                 <p>
                     don't have an account?
-                    <span><a href="signup.php" id="sign"> Sign up</a></span>
+                    <span><a href="signup.php" id="sign"> Sign up</a></span> <br>
+                    Rest password
+                    <span><a href="mail.php" id="sign">...Reset</a></span>
                 </p>
                 </form>
             </div>
