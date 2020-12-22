@@ -25,9 +25,9 @@
             $mail->Host = "smtp.gmail.com";
             $mail->Port = 587 ;
             $mail->IsHTML(true);
-            $mail->Username = "elefashion1@gmail.com";
-            $mail->Password = "anaamr123";
-            $mail->setFrom("elefashion1@gmail.com" ,"Elegant");
+            $mail->Username = ""; //gmail email
+            $mail->Password = ""; //gmail password
+            $mail->setFrom();
             $mail->AddAddress("$email");
             $mail->IsHTML(true);
 
